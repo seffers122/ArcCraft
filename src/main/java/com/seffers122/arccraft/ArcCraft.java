@@ -1,6 +1,7 @@
 package com.seffers122.arccraft;
 
 
+import com.seffers122.arccraft.handler.ConfigurationHandler;
 import com.seffers122.arccraft.proxy.IProxy;
 import com.seffers122.arccraft.utility.LogHelper;
 import cpw.mods.fml.common.Mod;
@@ -9,7 +10,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import com.seffers122.arccraft.reference.Reference;
-@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class ArcCraft
 {
     @Mod.Instance(Reference.MOD_ID)
@@ -20,16 +21,20 @@ public class ArcCraft
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        LogHelper.info("something");
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+
+        LogHelper.info("PreInitialization Complete!");
+
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-
+        LogHelper.info("Initialization Complete!");
     }
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        LogHelper.info("PostInitialization Complete!");
 
     }
 }
