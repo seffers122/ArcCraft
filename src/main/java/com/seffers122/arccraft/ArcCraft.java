@@ -2,8 +2,10 @@ package com.seffers122.arccraft;
 
 
 import com.seffers122.arccraft.handler.ConfigurationHandler;
+import com.seffers122.arccraft.init.ModItems;
 import com.seffers122.arccraft.proxy.IProxy;
 import com.seffers122.arccraft.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -22,7 +24,8 @@ public class ArcCraft
     public void preInit(FMLPreInitializationEvent event)
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+        ModItems.init();
         LogHelper.info("PreInitialization Complete!");
 
     }
