@@ -2,6 +2,7 @@ package com.seffers122.arccraft;
 
 
 import com.seffers122.arccraft.handler.ConfigurationHandler;
+import com.seffers122.arccraft.init.ModBlocks;
 import com.seffers122.arccraft.init.ModItems;
 import com.seffers122.arccraft.proxy.IProxy;
 import com.seffers122.arccraft.utility.LogHelper;
@@ -26,6 +27,7 @@ public class ArcCraft
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         ModItems.init();
+        ModBlocks.init();
         LogHelper.info("PreInitialization Complete!");
 
     }
