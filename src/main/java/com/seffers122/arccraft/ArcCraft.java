@@ -4,6 +4,7 @@ package com.seffers122.arccraft;
 import com.seffers122.arccraft.handler.ConfigurationHandler;
 import com.seffers122.arccraft.init.ModBlocks;
 import com.seffers122.arccraft.init.ModItems;
+import com.seffers122.arccraft.init.Recipes;
 import com.seffers122.arccraft.proxy.IProxy;
 import com.seffers122.arccraft.utility.LogHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -36,6 +37,7 @@ public class ArcCraft
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();
         LogHelper.info("Initialization Complete!");
     }
     @Mod.EventHandler

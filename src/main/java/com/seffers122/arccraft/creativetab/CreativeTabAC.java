@@ -13,7 +13,7 @@ public class CreativeTabAC {
     public static final CreativeTabs AC_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase()) {
         @Override
         public Item getTabIconItem() {
-            return ModItems.ArcConduit;
+            return ModItems.ArcCell;
         }
     };
 }
