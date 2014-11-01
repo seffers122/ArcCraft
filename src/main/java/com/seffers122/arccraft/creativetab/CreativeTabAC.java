@@ -10,15 +10,10 @@ import net.minecraft.item.Item;
  * Created by seffe_000 on 10/31/2014.
  */
 public class CreativeTabAC {
-    public static final CreativeTabs AC_TAB = new CreativeTabs(Reference.MOD_ID) {
+    public static final CreativeTabs AC_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase()) {
         @Override
         public Item getTabIconItem() {
             return ModItems.ArcConduit;
-        }
-        @Override
-    public String getTranslatedTabLabel()
-        {
-           return Reference.MOD_NAME;
         }
     };
 }

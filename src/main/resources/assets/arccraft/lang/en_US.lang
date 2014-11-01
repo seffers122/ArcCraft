@@ -1,2 +1,3 @@
-item.arccraft:ArcConduit.name=ArcConduit
+item.arccraft:ArcCell.name=ArcCell
 tile.arccraft:TeslaOre.name=Tesla Ore
+itemGroup.arccraft=ArcCraft

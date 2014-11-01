@@ -1,7 +1,7 @@
 package com.seffers122.arccraft.init;
 
 import com.seffers122.arccraft.item.ItemAC;
-import com.seffers122.arccraft.item.ItemArcConduit;
+import com.seffers122.arccraft.item.ItemArcCell;
 import com.seffers122.arccraft.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -11,7 +11,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems
 {
-    public static final ItemAC ArcConduit = new ItemArcConduit();
+    public static final ItemAC ArcConduit = new ItemArcCell();
     public static void init()
     {
         GameRegistry.registerItem(ArcConduit, "ArcConduit");

@@ -13,6 +13,8 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import com.seffers122.arccraft.reference.Reference;
+import net.minecraftforge.oredict.OreDictionary;
+
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class ArcCraft
 {
@@ -39,6 +41,10 @@ public class ArcCraft
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        for (String oreName : OreDictionary.getOreNames())
+        {
+            LogHelper.info(oreName);
+        }
         LogHelper.info("PostInitialization Complete!");
 
     }
